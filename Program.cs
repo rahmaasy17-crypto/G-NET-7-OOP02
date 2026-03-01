@@ -30,12 +30,12 @@ namespace ConsoleApp1
         // Property:Controlled access ,Can validate before store data and Enforces encapsulation and can contain logic like validate
         //or calculate or modifing data  before setting and limit getting [can prevent getting ]
         // read only property :
-        private double rate=4;// we can setting value by constructor
+        private double rate=4;// we can setting value by constructor 
 
-        public double account_rate
+        public bool Goodrate// NO backing field created
         {
-            get { return rate +1; }
-        }//in main we can print account_rate[5] but we can change the rate
+            get { return rate>3; } //it calculated in runtime and didnot stored [we can do any operation like area]
+        }//in main we can print rate state > if (account.Goodrate){console.writeline ("goodrate");}
         #endregion
         #endregion
     }
