@@ -70,6 +70,15 @@ namespace ConsoleApp1
         //}
 
         #endregion
+        #region Q4 
+        //A:The static keyword means that TotalOrders belongs to the class and instaces are shared across all objects
+        //and Instance members like [Item] belong to thier objects only
+        //B: A static method cannot access instance members directly because it is not tied to a specific object
+
+
+        //static member can be accessed by using  class name, but Instance members without creating an object cannot be accessed
+        //so A static method cannot access instance members directly because it is not associated with a specific object
+        #endregion
         #endregion
     }
     internal class Program
