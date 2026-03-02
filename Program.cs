@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static System.Collections.Specialized.BitVector32;
 
 namespace ConsoleApp1
 {
@@ -7,6 +8,7 @@ namespace ConsoleApp1
     {
         private string owner;
         private double balance;
+        private string[] _sections;
         public void Withdraw(double amount)
         {
             if (amount > 0)
@@ -36,6 +38,37 @@ namespace ConsoleApp1
         {
             get { return rate +1; }
         }//in main we can print account_rate[5] but we can change the rate
+        #endregion
+        #region Q3
+        //A: This  is indexer use it when I want to treat a object as an array <collection> and this refers to the inestance[object] that we create
+        //B:output will be <IndexOutOfRangeException> becuse array lenght is 5
+        //we can make indexer safer by validate first if index [10] is < lenght[5] we can set else print message
+        // set
+        //{
+        //    if (index< 0 || index >= names.Length)
+        //        console.write("Invalid index");
+        //    names[index] = value;//we can create same validation in get to prevent any errors
+        //}
+        //C: we can do more than one indexer by using Overloaded Indexers [same indexer but change parameters]
+        //For example, I want to reach to data using the index or the value
+        //public string this[int index]
+        //{
+        //    get {return _sections[index]; }//can validate first
+        //}
+
+        //// Access by section name
+        //public string this[string sectionName]
+        //{
+        //    get
+        //    {
+        //        foreach (var section in _sections) // Access by section name 
+        //        {
+        //            if (section == sectionName)
+        //                return section;
+        //        } return null;
+        //    }
+        //}
+
         #endregion
         #endregion
     }
